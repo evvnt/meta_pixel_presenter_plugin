@@ -2,11 +2,11 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pixel_analytics_presenter_plugin/version'
+require 'meta_pixel_presenter_plugin/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'pixel_analytics_presenter_plugin'
-  spec.version       = PixelAnalyticsPresenterPlugin::VERSION
+  spec.name          = 'meta_pixel_presenter_plugin'
+  spec.version       = MetaPixelPresenterPlugin::VERSION
   spec.authors       = ['Rhet Prieto']
   spec.email         = ['rhet@evvnt.com']
 

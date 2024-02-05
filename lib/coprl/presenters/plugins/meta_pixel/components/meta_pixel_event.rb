@@ -3,7 +3,7 @@
 module Coprl
   module Presenters
     module Plugins
-      module PixelAnalytics
+      module MetaPixel
         class MetaPixelEvent < DSL::Components::Base
           attr_reader :event_name, :event_data
 
