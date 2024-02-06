@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative 'pixel_analytics/components/meta_pixel_component'
-require_relative 'pixel_analytics/components/meta_pixel_event'
-require_relative 'pixel_analytics/render'
+require_relative 'meta_pixel/components/meta_pixel_component'
+require_relative 'meta_pixel/components/meta_pixel_event'
+require_relative 'meta_pixel/render'
 
 module Coprl
   module Presenters
     module Plugins
-      module PixelAnalytics
+      module MetaPixel
         module DSLComponents
           def meta_pixel(pixel_id, **attributes, &block)
-            self << PixelAnalytics::MetaPixelComponent.new(
+            self << MetaPixel::Component.new(
               pixel_id,
               **attributes,
               parent: self,
@@ -19,7 +19,7 @@ module Coprl
           end
 
           def create_meta_pixel_event(event_name, event_data, **attributes, &block)
-            self << PixelAnalytics::MetaPixelEvent.new(
+            self << MetaPixel::Event.new(
               event_name,
               event_data,
               **attributes,

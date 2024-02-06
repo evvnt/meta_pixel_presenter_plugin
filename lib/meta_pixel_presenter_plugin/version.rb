@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module PixelAnalyticsPresenterPlugin
+module MetaPixelPresenterPlugin
   VERSION = '2.0.0'
 end

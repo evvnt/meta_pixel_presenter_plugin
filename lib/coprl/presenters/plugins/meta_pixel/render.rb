@@ -1,21 +1,21 @@
 module Coprl
   module Presenters
     module Plugins
-      module PixelAnalytics
+      module MetaPixel
         module WebClientComponents
           def view_dir_meta_pixel(_pom)
             File.join(__dir__, '../../../../..', 'views', 'components')
           end
 
-          def render_pixel_analytics(pom, render:, components:, index:)
+          def render_meta_pixel(pom, render:, components:, index:)
             # this plugin does not render any component markup.
           end
 
-          def render_header_pixel_analytics(pom, render:)
+          def render_header_meta_pixel(pom, render:)
             meta_pixel_ids = pom.context[:meta_pixel_ids]
             return unless meta_pixel_ids
 
-            render.call(:erb, :pixel_analytics_header,
+            render.call(:erb, :meta_pixel_header,
                         views: view_dir_meta_pixel(pom),
                         locals: { meta_pixel_ids: meta_pixel_ids })
           end

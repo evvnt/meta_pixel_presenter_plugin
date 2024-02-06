@@ -3,7 +3,7 @@
 module Coprl
   module Presenters
     module Plugins
-      module PixelAnalytics
+      module MetaPixel
         class MetaPixelComponent < DSL::Components::Base
           attr_reader :pixel_id
 
