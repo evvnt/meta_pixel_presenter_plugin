@@ -10,7 +10,7 @@ module Coprl
       module MetaPixel
         module DSLComponents
           def meta_pixel(pixel_id, **attributes, &block)
-            self << MetaPixel::Component.new(
+            self << Components::MetaPixelComponent.new(
               pixel_id,
               **attributes,
               parent: self,
@@ -19,7 +19,7 @@ module Coprl
           end
 
           def create_meta_pixel_event(event_name, event_data, **attributes, &block)
-            self << MetaPixel::Event.new(
+            self << Components::MetaPixelEvent.new(
               event_name,
               event_data,
               **attributes,

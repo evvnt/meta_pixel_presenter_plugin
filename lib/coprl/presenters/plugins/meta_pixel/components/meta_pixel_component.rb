@@ -4,13 +4,15 @@ module Coprl
   module Presenters
     module Plugins
       module MetaPixel
-        class MetaPixelComponent < DSL::Components::Base
-          attr_reader :pixel_id
+        module Components
+          class MetaPixelComponent < DSL::Components::Base
+            attr_reader :pixel_id
 
-          def initialize(pixel_id, **attributes, &block)
-            @pixel_id = pixel_id
-            super(type: :meta_pixel_tag, **attributes, &block)
-            expand!
+            def initialize(pixel_id, **attributes, &block)
+              @pixel_id = pixel_id
+              super(type: :meta_pixel_tag, **attributes, &block)
+              expand!
+            end
           end
         end
       end
