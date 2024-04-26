@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pixel_analytics_presenter_plugin (2.0.0)
+    meta_pixel_presenter_plugin (2.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -15,7 +15,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2)
-  pixel_analytics_presenter_plugin!
+  meta_pixel_presenter_plugin!
   rake (~> 13)
 
 BUNDLED WITH
